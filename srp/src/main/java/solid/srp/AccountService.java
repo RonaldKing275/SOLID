@@ -7,7 +7,8 @@ public class AccountService {
     private TransactionRepository transactionRepository;
     private Clock clock;
 
-    public AccountService(TransactionRepository transactionRepository, Clock clock, Console console) {
+    // Poprawiony konstruktor - usunięto 'console'
+    public AccountService(TransactionRepository transactionRepository, Clock clock) {
         this.transactionRepository = transactionRepository;
         this.clock = clock;
     }
@@ -28,5 +29,4 @@ public class AccountService {
     private Transaction transactionWith(int amount) {
         return new Transaction(clock.today(), amount);
     }
-
 }
