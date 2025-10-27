@@ -7,7 +7,6 @@ public class AccountService {
     private TransactionRepository transactionRepository;
     private Clock clock;
 
-    // Poprawiony konstruktor - usunięto 'console'
     public AccountService(TransactionRepository transactionRepository, Clock clock) {
         this.transactionRepository = transactionRepository;
         this.clock = clock;
